@@ -561,7 +561,24 @@
     $('#locationHall').textContent = w.hall;
     $('#locationAddress').textContent = w.address;
     $('#locationTel').textContent = w.tel ? `Tel. ${w.tel}` : '';
-    $('#locationDes').textContent = w.des;
+    const locationDes = $('#locationDes');
+    locationDes.replaceChildren();
+    if (Array.isArray(w.transport)) {
+      for (const entry of w.transport) {
+        const row = document.createElement('div');
+        row.className = 'location__transport-row';
+        const label = document.createElement('span');
+        label.className = 'location__transport-label';
+        label.textContent = entry.label;
+        const detail = document.createElement('span');
+        detail.className = 'location__transport-detail';
+        detail.textContent = entry.detail;
+        row.append(label, detail);
+        locationDes.append(row);
+      }
+    } else {
+      locationDes.textContent = w.des || '';
+    }
     $('#locationMapImg').src = 'images/location/1.jpg';
     $('#kakaoMapBtn').href = w.mapLinks.kakao || '#';
     $('#naverMapBtn').href = w.mapLinks.naver || '#';

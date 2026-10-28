@@ -1166,3 +1166,27 @@ a {
     transform: none !important;
   }
 }
+
+/* Two-column transit directions, aligned consistently on mobile */
+.location__des:has(.location__transport-row) {
+  white-space: normal;
+  width: min(100%, 420px);
+  margin: 1.25rem auto 0;
+  text-align: left;
+}
+.location__transport-row {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  column-gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 0.85rem;
+  line-height: 1.8;
+}
+.location__transport-label {
+  white-space: nowrap;
+  font-weight: 500;
+}
+.location__transport-detail {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
