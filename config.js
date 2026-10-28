@@ -18,7 +18,7 @@ const CONFIG = {
 
   // ── 메인 (히어로) ──
   groom: {
-    name: "한재혁",
+    name: "한재철",
     nameEn: "Groom",
     father: "한 경",
     mother: "정명숙",
@@ -67,7 +67,7 @@ const CONFIG = {
   // ── 마음 전하실 곳 ──
   accounts: {
     groom: [
-      { role: "신랑", name: "한재혁", bank: "국민은행", number: "067502-04-329005" },
+      { role: "신랑", name: "한재철", bank: "국민은행", number: "067502-04-329005" },
       { role: "아버지", name: "한 경", bank: "국민은행", number: "085-05-0002-221" },
       { role: "어머니", name: "정명숙", bank: "신한은행", number: "110-003-641949" }
     ],
